@@ -1368,20 +1368,26 @@ ${data.description}
 
 ## Installation
 ${data.installation}
+
 ## Usage
 ${data.usage}
+
 ## Credits
 ${data.credits}
+
 ## License
 ${renderLicenseLink(data.license)}
 ${renderLicenseBadge(data.license)}
 ${renderLicenseSection(data.license)}
 
 ## Features
+${data.features}
 
 ## How to contribute
+${data.contribute}
 
 ## Tests
+${data.test}
 `;
 }
 

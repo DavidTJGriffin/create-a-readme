@@ -8,7 +8,7 @@ const { NONAME } = require('dns');
 const questions = [{
     type: 'input',
     name: 'title',
-    message: "What id the name of your project?",
+    message: "What is the name of your project?",
 }, {
     type: 'input',
     name: 'description',

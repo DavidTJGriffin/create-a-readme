@@ -22,6 +22,7 @@
 7. Copy the README.md file or raw code and paste into your own project
 ## Usage
 * Use this command-line README.md generator to stream-line the creation of professional and descriptive README.md files for your projects. 
+![Project Screenshot](./assets/images/project-screenshot.png)
 ## Credits
 [David Griffin](https://github.com/DavidTJGriffin)
 ## License
