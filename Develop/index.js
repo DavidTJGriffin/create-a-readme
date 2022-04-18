@@ -2,6 +2,7 @@
 var inquirer = require('inquirer');
 var generateMarkdown = require('./utils/generateMarkdown');
 var fs = require('fs');
+const { NONAME } = require('dns');
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -12,11 +13,6 @@ const questions = [{
     type: 'input',
     name: 'description',
     message: "What is your description?",
-},
-{
-    type: 'input',
-    name: 'table-of-contents',
-    message: "What is the table of contents?",
 },
 {
     type: 'input',
@@ -37,7 +33,8 @@ const questions = [{
     type: 'list',
     name: 'license',
     message: "What is the license of the project?",
-    choices: ["GPL License", "MIT license", "Apache License 2.0", "BSD License", "Mozilla Public License 2.0", "None"],
+    choices: ["GPL License", "MIT License", "Apache License 2.0", "BSD License", "Mozilla Public License 2.0", "None"],
+    default: 'none'
 },
 {
     type: 'input',
@@ -58,7 +55,7 @@ const questions = [{
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data, function (error, success) {
+    fs.writeFile(fileName, data, function (error, success) {
         if (error) throw error;
         console.log(fileName + "created successfully");
     })
@@ -72,10 +69,11 @@ function init() {
             // Use user feedback for... whatever!!
             console.log(answers);
             //convert into the readme friendly format 
-
+            const readmeFormat = generateMarkdown(answers);
+            console.log(readmeFormat)
 
             //call the write file function to create e
-           // writeToFile("README.md", data);
+            writeToFile("README.md", readmeFormat);
         })
 }
 
