@@ -9,6 +9,7 @@
 - [License](#license)
 
 ## Installation
+[Video](https://watch.screencastify.com/v/UV9ylZuAxjYpsIOUF3FO)
 1. Fork this repository
 2. Open terminal in Develop directory
 3. First, Run:
